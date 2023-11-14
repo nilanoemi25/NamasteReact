@@ -1,0 +1,94 @@
+https://github.com/namastedev/namaste-react 
+
+Episode 2 Igniting the APP 
+
+If we were to create a REACT app then that is already ignited. It uses Webpack and Babel as a bundler in the background. 
+
+We want to learn to ignite from scratch. 
+
+NPM is a package manager. Not called Node Package Manager 
+We want to use it in our programm to manage all the packages that we will install. 
+Sometimes packages are also known as dependencies. 
+Our project is dependent on a lot of packages/dependencies. 
+NPM will manage these, their versions etc. It will take care of things inside the package.json
+
+
+npm - init 
+This will create a package.json. What is this package.json? 
+Package.json file is a configuration for our NPM. 
+
+START installing Dependencies 
+
+The most important package is a bundler, to compress our whole code before it can be sent to production. Webpack/Parcel/Vit 
+
+It will bundle our code together so that it can be shipped to production. 
+
+Akshay is using Parcel for this project.  Parsel will give the muscles to our skeleton app. 
+
+To install dependency via NPM: 
+npm install -D nameofpackage
+
+Two kind of dependencies an App can have: 
+1. Dev dependency - It is generally required in a development phaze
+2. Normal dependency - used in production 
+
+Difference between ^ and ~ infront of the dependency. 
+Possible interview question.
+~ is major updates only 
+^ all minor updates and is safer option to use so it wont break the app
+
+Package-lock.json keeps track of the exact version being used in the app. 
+Interview Question! 
+
+Package-lock.json locks the package and keeps the exact details of it. Doesnt have a ^ or ~. 
+
+Issue: It's working on local but not working on product!: 
+'integrity' To avoid it the package-lock keeps a hash to ensure that the same version is deployed to production. 
+
+Package-lock.json: 
+Keeps a track of all the exact versions of all the dependencies. 
+
+Node_Module contains all the code we fetched from NPM. 
+Node Modules is kind of like a database, that contains the Data needed by the dependency. It's huge! 
+node modules meme :D 
+
+Transitive Dependencies:
+Parcel is our dependency, but Parcel has it's own dependencies and they have their dependencies 
+
+How is Parcel managing all the transitive dependencies? 
+
+Every dependency has it's own package.json. 
+
+If you have package.json and package.lock.json you can recreate all node modules. We dont upload node_modules to github. 
+
+npm - install 
+to recreate node_modules 
+
+Just like we have NPM, we also have NPX means executing a package. 
+NPM for installing, NPX for executing, 
+
+npx anypackagename 
+
+to quit executing: Ctrl + C 
+
+Another way to get React in to our app is via NPM ( instead of CDN). 
+CDN is not the preferred way of bringining react in to product. 
+It is a costly operation. 
+We want to most update version of react 
+
+npm install react ( no -D!!)
+npm i react-dom 
+
+use import to bring in React from node modules. And same for ReactDOM 
+
+Parceljs.org Read Parcel documentation  
+This will help in system design interview 
+
+NPM automatically generated an entry point in package.json called MAIN. 
+However when executing through NPX, we give the entry point via terminal, so to avoid error the MAIN from NPM needs to be deleted. 
+
+To create a production (build) ready app: 
+npx parcel build index.html 
+
+Go to Browserslist.dev to check what versions will be supported. 
+You have to configure your own list which takes an array in the package.json file. 
