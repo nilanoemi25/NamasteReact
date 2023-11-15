@@ -92,3 +92,31 @@ npx parcel build index.html
 
 Go to Browserslist.dev to check what versions will be supported. 
 You have to configure your own list which takes an array in the package.json file. 
+
+Episode 3
+
+Run project by executing: npx parcel index.html 
+This will create a development build up and host it on local host. 
+
+Let us create a script(configure a script) so we dont have to write NPX each time to start. 
+
+"start": "parcel index.html", DEV MODE 
+"build": "parcel build index.html" PRODUCTION MODE
+
+npm run nameofscript 
+OR 
+npm nameofscript (for start(keyword) only)
+
+If you give attributes to JSX, you must use camelcase, unlike in HTML. 
+
+Babel transpiles JSX to React.createElement, which turns in to a JS Object which then is rendered in to HTML Element. 
+
+React Component - everything is a React Component
+Two ways: 
+Class based Component OLD WAY 
+Functional Component NEW WAY 
+
+Normal function, must be used with Captial Letter. 
+Will return a JSX Component
+
+InterviewQ : Component Composition: is placing one component into another component. 

@@ -1,21 +1,21 @@
 
-
 import React from "react"; 
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div",{id: "parent"}, [
-    React.createElement("div", {id:"child"},[
-        React.createElement("h1", {}, "I'm a h1 tag"),
-        React.createElement("h2",{}, "I'm a h2 tag"),
-    ]),
-    React.createElement("div", {id:"child2"}, [
-        React.createElement("h1", {}, "I'm a h1 tag"),
-        React.createElement("h2",{}, "I'm a h2 tag"),
-    ]),
-]); 
+// React Element => Oject => when rendered to DOM, it becomes HTML 
 
-console.log(parent); // object
+// JSX was created to help the developers, It is a JS syntacs that makes it easier to create REACT elements
+// JSX is not REACT as such; JSX is not HTML. 
+// JSX (Transpiled before it reaches the JS engine) - by PARCEL who gives it to a package called Babel
+
+const title = (
+    <h1 className="head" tabIndex="5">
+        Namaste React using JSX 😎
+    </h1>
+)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(title);
+
+
