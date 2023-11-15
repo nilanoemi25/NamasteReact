@@ -120,3 +120,7 @@ Normal function, must be used with Captial Letter.
 Will return a JSX Component
 
 InterviewQ : Component Composition: is placing one component into another component. 
+
+React sanitizes JS data in {} to prevent cross site scripting attacks! 
+
+JSX makes your React code readable. 
