@@ -124,3 +124,44 @@ InterviewQ : Component Composition: is placing one component into another compon
 React sanitizes JS data in {} to prevent cross site scripting attacks! 
 
 JSX makes your React code readable. 
+
+Episode 4
+
+Planning first for app. 
+-what are you going to build? How will it look? UI Design 
+
+Low level planning; Components: 
+
+Header, 
+  - Logo 
+  - Nav Items 
+Body, 
+  - Search 
+  - Restaurant container 
+    ** RestaurantCard 
+     *** Img 
+     *** Name of Res, Star Rating, Cuisine, Delivery Time 
+Footer components 
+  - Copyright 
+  - Links 
+  - Address 
+  - Contact 
+
+The beauty of JSX, we can write CSS like script, by writing a JS object, with css properties. Inline css is possible in JSX. 
+
+Passing a prop to a component is just like passing an argument to a function! 
+
+Props in a JS object. 
+
+Config Driven UI: 
+Website that is driven by data( configs). 
+
+Destructuring of props is possible on the fly or separately. 
+const { A, B, C} = props; 
+
+You always have to give a unique key to each component when looping through them.(MAP) 
+It takes a big performance hit if you dont write keys. 
+Never use indexes as keys! according to React official documentation 
+
+This is episode 5
+
