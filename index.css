@@ -60,3 +60,7 @@ border: 1px solid black;
     height: 45%;
 
 }
+.filter-btn{
+margin:10px; 
+cursor:pointer; 
+}

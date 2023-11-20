@@ -165,3 +165,59 @@ Never use indexes as keys! according to React official documentation
 
 This is episode 5
 
+You must use a unique key when using MAP to identify each loop. 
+Dont use indexes as per React official documentation. 
+
+Never keep hard coded data in components file. 
+
+Two types of export/import
+
+Default
+
+export default<nameofComponent>;
+import <nameofComponent> from  "path";
+
+Named
+
+export const <nameofComponent>
+import {<nameofComponent>} from "path"; 
+
+Can I use a default export along with named export? 
+
+A file can only have one default export, but it can have numerous named exports!
+
+React is fast in DOM manipulation. 
+If you have to keep Data and UI layer consistent that is when React?angular framework come in hand. 
+React is fast because it can do efficient DOM manipulation, due to virtual DOM. 
+
+Normal JS variable but if you give the same variable superpowers, it will become a super energetic react variable. 
+
+REACT HOOK 
+
+Super powerful variable is called State Variable. 
+State is a keyword. 
+For creation of state variable we use React Hooks. 
+
+(React element is a plain JS object. )
+
+React hook is a normal JS function, given to us by React, prebuilt. The only thing is that function comes with prewritten super powers, it has utility function, that has logic in the background, written by FB developers. 
+
+There are multiple React hooks. 
+There are two important hooks : 
+-useState() - used to generate super powerful variables in react
+-useEffect() 
+
+import useState from react! as named import 
+
+Whenever a state variable changes, react will re-render my component. 
+This feature is the reason react is the most popular library. 
+
+-Reconciliation Algorithim ( React Fiber) 
+
+Virtual DOM is represenation of actual DOM. = normal JS Object 
+
+-Diff Algorithim 
+Finds out the difference between two virtual DOMs,
+it will calculate the difference and update the actual DOM on every render cycle. 
+
+React is fast is because it has a virtual DOM, and a Diff algorithim. 
