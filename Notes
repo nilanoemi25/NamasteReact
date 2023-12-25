@@ -221,3 +221,117 @@ Finds out the difference between two virtual DOMs,
 it will calculate the difference and update the actual DOM on every render cycle. 
 
 React is fast is because it has a virtual DOM, and a Diff algorithim. 
+
+This is Episode 6 
+
+Monolithic Architecture:
+
+Micro Service Architecture:
+Different services for different jobs, known as separation of concerns and is based on single responsibility principles. 
+There are different connections between these services. 
+
+All the services are run on their own ports. All these ports are mapped to domain name. 
+
+Two Approaches of how data is fetched from back-end 
+
+1) Page loads - make API call - then render to UI 
+
+2) As soon as page loads - we will render a UI - make API call - populate, rerender with new data 
+
+In React we will always use second approach. Better UX. 
+
+Shimmer UI for better user experience 
+
+Episode 7
+
+useEffect is called after every render of the component. 
+The dependency array changes the behaviour of the useEffect. 
+
+* When you useEffect, without dependency array, it will be called on every component render. 
+
+* If the dependency array is empty =[] then useEffect is called on only initial render. 
+
+* If we put something inside the dependency array, it will only be called when the dependency changes. 
+
+(It always comes on initial render)
+
+Never put useEffect outside of a component. 
+The purpose of useEffect is to create a local variable inside a component. Try to call useState at the top of the component to avoid inconsistency. Never use a useState hook inside an if else clause as it can create inconsistencies in the programme. Never create a stateVariable inside a for loop or function. 
+
+React Router Package for routing
+(react-router-dom)
+
+First create routing configuration. {createBrowserRouter } from "react-router-dom";
+Tell the configuration what will happen when you call a certain location. 
+Import Router provider so that we can share our configuration with the app itself. 
+
+React-error-dom gives us an access to an important error Hook. 
+useRouteError - this will give more information about the error. 
+
+How to tell something is a hook? 
+Any function that begins with 'use....' is a hook. 
+
+React-router-dom also provides us with Outlet component to tunnel the children path to the display.
+
+When using React, never ever use an anchor tag <a> to redirect, because it causes the whole page to refresh. Use Link from react router dom. 
+This is why React is known as a single page application. Everything is a component and it is the components that are being changed among themselves. 
+
+Two Types of Routing in Web Apps
+* Client Side Routing 
+  All the components are already loaded in to the app - from the first time it loads. The different components are loaded to the UI, but no further network calls are made. 
+
+* Server Side Routing 
+   You have index.html, about.html, and anchor tag, it reloads the whole page, renders it on to UI. Makes a network call to the server. 
+
+   // Speak while you code! 
+
+   LET EXPLANATION 
+
+   Let and const are local variables (block code). So when you're using the let,const then the variables you can't use global (outside of block) . But var is a global variable and you use anywhere in your code based on your decoration of var variables. 
+
+ Also var allows the hosting technique. That means if you are accessing var variables before it deceleration. For example:- 
+Console.log(a) ; 
+Var a="varrr"; 
+Then in the console you got the undefined. 
+But let and const do not follow this hosting.if you try like this 
+Console.log(a) ; 
+Let a="let"; 
+Then you get the error(not getting undefined). Let is stored in a temporary dead zone where  the js code reaches the let and const variables then only it's stored in temporary dead zone.
+
+--------------------------------------------------------------------------------------------
+
+Episode 8 
+Class Based Components
+
+A class based component is a normal JS class. 
+We use key words 'extends React.Component' to tell React that it is a component. We have a render method inside the class that will return a piece of JSX code. 
+
+React.Component is basically a React class and our class is inheriting properties from it. We need to import it from react. 
+
+Always use this keyword to access props inside the class.
+
+The 'super' keyword is used in classes to call the constructor or access the properties and methods of a parent(superclass)
+
+Just like 'this' keyword refers to this object, the 'super' keyword refers to the parent of the object.  
+
+We never modify our state variables directly in a class component, we will not equate it to some new value. 
+
+Whenever a class is instantiated the constructor is called, then the render method is called. Then ComponentDidMount method is called once the component has been completely mounted. 
+
+We use CompnentDidMount method to call API. So that React Component loads very fast, we load page then make API call to fill the data. We dont wait for the data to render the component as it will take too long to wait. 
+
+React LifeCycle Diagram - 2 phazes "render phaze" and "commit phaze"
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ 
+React will batch the different children's render phazes together as an optimisation(DOM updating is very expensive)! Then it will move on to the commit phaze which is also batched together.  
+
+Never compare React's Life Cycle to Functional Component.
+
+React is a single page application. SPA 
+When you switch among the 'pages' it is not reloading the page, it is only changing the components. This is a CON. 
+
+Episode 9 Custom Hooks 
+
+Custom Hooks help our code to be more modular and readable. 
+A hook is just a utility function. 
+
+What is the contract of the hook? = what is the input and output.
